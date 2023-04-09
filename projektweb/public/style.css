@@ -1,244 +1,258 @@
 /* set def*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* backgr */
-  html {
-    height: 100%;
-  }
-
-  body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #007791;
-  }
-  
-  a:hover {
-    color: #005569;
-  }
-  
-  h1, h2 {
-    font-weight: 700;
-  }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-  
-  /* nagł */
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #007791;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 0;
-  }
-  
-  header h1 {
-    color: #fff;
-  }
-  
-  /* sekcje // podsekcje */
-  section {
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  section p {
-    margin-bottom: 16px;
-  }
-  
-  /* listy */
-  #courses ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  #courses li {
-    background-color: #fff;
-    padding: 16px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 8px;
-    width: calc(50% - 16px);
-    text-align: left;
-  }
-  
-  /* log */
-  #application form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  #application label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  #application input {
-    padding: 8px;
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  #application button {
-    background-color: #007791;
-    color: #fff;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #application button:hover {
-    background-color: #005569;
-  }
-  
-  /* cw etc */
-  footer {
-    background-color: #333;
-    padding: 20px 0;
-    text-align: center;
-  }
-
-  .content-wrapper {
-    flex-grow: 1;
-    margin-top: 100px;
-  }
-  
-  footer p {
-    color: #fff;
-  }
-  /* przycisk do logowania i rejestracji*/
-  nav {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-.button-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.login-button, .register-button {
-  background-color: #7b8183;
+/* backgr */
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #007791;
+}
+
+a:hover {
+  color: #005569;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* nagł */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #e7e8e9;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+header h1 {
+  color: #fff;
+}
+
+/* sekcje // podsekcje */
+section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+section p {
+  margin-bottom: 16px;
+}
+
+/* listy */
+#courses ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#courses li {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  width: calc(50% - 16px);
+  text-align: left;
+}
+
+/* log */
+#application form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#application label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#application input {
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#application button {
+  background-color: #007791;
   color: #fff;
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+#application button:hover {
+  background-color: #005569;
+}
+
+/* copywrite etc */
+footer {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.content-wrapper {
+  flex-grow: 1;
+  margin-top: 100px;
+}
+
+footer p {
+  color: #fff;
+}
+/* przycisk do logowania i rejestracji*/
+nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.button-container {
+position: absolute;
+top: 20px;
+right: 20px;
+}
+
+.login-button {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 8px 16px;
+  border: px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 8px;
+}
+.register-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: px;
+  border-radius: px;
+  cursor: pointer;
+  transition: background-color 0.3s;
   margin-left: 8px;
 }
 
-.login-button:hover, .register-button:hover {
-  background-color: #005569;
+.login-button:hover {
+background-color: #ffffff1e;
+}
+.register-button:hover{
+  background-color: #000000e7;
 }
 
 /* lista kat */
 .dropdown {
-  position: sticky;
-  left: -300px;
-  border: 0.1px solid #7d807b;
-  display: inline-block;
+position: sticky;
+left: -300px;
+border: 0.1px solid #7d807b;
+display: inline-block;
 }
 
 .dropdown-label {
-  cursor: pointer;
+cursor: pointer;
 }
 
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  list-style-type: none;
-  padding: 8px;
+display: none;
+position: absolute;
+left: 0;
+top: calc(100% + .25rem);
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+list-style-type: none;
+padding: .65rem;
 }
 
 .dropdown-menu li {
-  padding: 8px;
-  border-bottom: 1px solid #ccc;
+padding: 8px;
+border-bottom: 1px solid #ccc;
 }
 
 .dropdown-menu li:last-child {
-  border-bottom: none;
+border-bottom: none;
 }
 
 .dropdown-menu button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
+background: none;
+border: none;
+cursor: pointer;
+width: 100%;
+text-align: left;
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+display: block;
 }
 
 /* logo */
 
 .logo {
-  display: inline-flex;
-  align-items: center;
+display: inline-flex;
+align-items: center;
 }
 
 .logo img {
-  height: 50px;
-  width: auto;
+height: 50px;
+width: auto;
 }
 
 .search-container {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  margin: 0 1rem;
-  max-width: 400px;
-  width: 100%; 
+flex-grow: 1;
+display: flex;
+justify-content: center;
+margin: 0 1rem;
+max-width: 400px;
+width: 100%; 
 }
 
 .search-container input {
-  width: 80%;
-  padding: 0.3rem;
-  box-sizing: border-box;
+width: 80%;
+padding: 0.3rem;
+box-sizing: border-box;
 }
