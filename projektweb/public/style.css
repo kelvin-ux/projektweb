@@ -1,0 +1,124 @@
+/* Resetowanie stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ogólne style */
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f0f0f0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007791;
+  }
+  
+  a:hover {
+    color: #005569;
+  }
+  
+  h1, h2 {
+    font-weight: 700;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  /* Nagłówek */
+  header {
+    background-color: #007791;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: #fff;
+  }
+  
+  /* Sekcje */
+  section {
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  section p {
+    margin-bottom: 16px;
+  }
+  
+  /* Lista kursów */
+  #courses ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #courses li {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 8px;
+    width: calc(50% - 16px);
+    text-align: left;
+  }
+  
+  /* Formularz zgłoszeniowy */
+  #application form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #application label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  #application input {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #application button {
+    background-color: #007791;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #application button:hover {
+    background-color: #005569;
+  }
+  
+  /* Stopka */
+  footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    color: #fff;
+  }
+  
