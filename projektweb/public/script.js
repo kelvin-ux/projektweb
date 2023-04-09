@@ -86,66 +86,44 @@ function App() {
 
 // funckje do przycisków //
 
-// function strgl(){
-//   return (
-      
-//   )
-// }
-function CoursePython(){
-  return(
-    <div>
-      <h2>Kurs pytonga</h2>
-      <p>kurs uczacy w pytongi</p>
-      <p>Cena: I tak cie nie stać</p>
-    </div>
-  );
-}
-function CourseAI(){
-  return(
-    <div>
-      <h2>Kurz z AI</h2>
-      <p>Nauczymy cie jak klepac AI</p>
-      <p>Cena: Duzo</p>
-    </div>
-  )
-}
-function CourseDataAnalysis(){
-  return(
-    <div>
-      <h2>Kurs o danych</h2>
-      <p>uczymy sie klepac w exela</p>
-      <p>cena: 0 PLN</p>
-    </div>
-  )
-}
-function CourseReact(){
-  return(
-    <div>
-      <h2>Kurs z weba</h2>
-      <p>My sami nic nie potrafimy wiec sam sie uczysz</p>
-      <p>Cena: Zapłacimy ci za ten kurs!</p>
-    </div>
-  )
-}
-function login(){
-  return (
-    <div>
-      <h2>Zaloguj się:</h2>
-      <p>konto robimy</p>
-      <button>
-        <Link to="/">Powrót</Link>
-      </button>
-    </div>
-  )
+
+
+
+const courses = [
+  "kurs z pythona",
+  "kurs z AI",
+  "kurs z data analiza",
+  "kurs z reacta"
+];
+
+function searchCourses() {
+  const searchInput = document.getElementById("search-input");
+  const searchResults = document.getElementById("search-results");
+  const searchText = searchInput.value.toLowerCase().trim();
+  searchResults.innerHTML = "";
+
+  if (searchText.length === 0) return;
+
+  const matchedCourses = courses.filter(course => course.toLowerCase().includes(searchText));
+
+  matchedCourses.forEach(course => {
+    const resultElement = document.createElement("div");
+    resultElement.classList.add("search-result");
+    resultElement.textContent = course;
+
+    resultElement.addEventListener("click", () => {
+      const courseIndex = matchedCourses.indexOf(course) + 1;
+      window.location.href = `kurs${courseIndex}.html`;
+    });
+
+    searchResults.appendChild(resultElement);
+  });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const loginButton = document.getElementById('login-button');
-  
-  loginButton.addEventListener('click', function() {
-    window.open('logowanie.html', '_blank');
-  });
-});
+document.getElementById("search-input").addEventListener("input", searchCourses);
+
+
+
 
 
 export default App;

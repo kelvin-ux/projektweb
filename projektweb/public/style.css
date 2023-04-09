@@ -152,9 +152,9 @@ nav {
 }
 
 .button-container {
-position: absolute;
-top: 20px;
-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .login-button {
@@ -176,6 +176,7 @@ right: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
   margin-left: 8px;
+  margin-right: 16px;
 }
 
 .login-button:hover {
@@ -187,14 +188,16 @@ background-color: #ffffff1e;
 
 /* lista kat */
 .dropdown {
-  position: sticky;
-  left: -300px;
-  border: 0.1px solid #7d807b;
   display: inline-block;
+  position: relative;
+  vertical-align: middle;
 }
 
 .dropdown-label {
+  color: #4CAF50;
+  font-size: 16px;
   cursor: pointer;
+  padding: 8px 16px;
 }
 
 .dropdown-menu {
@@ -214,6 +217,11 @@ background-color: #ffffff1e;
   border-bottom: 1px solid #ccc;
 }
 
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+
 .dropdown-menu li:last-child {
   border-bottom: none;
 }
@@ -228,6 +236,13 @@ background-color: #ffffff1e;
 
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+.dropdown-container {
+  display: inline-flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 /* logo */
@@ -264,7 +279,7 @@ background-color: #ffffff1e;
   padding: 0 2.5rem;
   padding-left: 2.5rem;
   outline-color: #000000d2;
-  text-align: center;
+  text-align: -20px;
 }
 
 /* ikonka */
@@ -278,6 +293,59 @@ background-color: #ffffff1e;
 }
 
 .serch-icon zdj{
-  height: 10px;
-  width: 10px;
+  height: 20px;
+  width: auto;
+}
+
+/* powrót na str główna nie wiem czy sie opłaca czy powrót tylko poprzez logo*/
+
+/* jak cos to tu kod do tego
+      <div class="back-to-main">
+        <a href="index.html">Back to main</a>
+      </div>
+*/
+
+.back-to-main {
+  position: fixed;
+  bottom: 628px;
+  left: 10px;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.back-to-main a {
+  text-decoration: none;
+  color: #31b659a8;
+}
+
+.back-to-main a:hover {
+  text-decoration: underline;
+}
+
+
+/* style do list przy wyszukiwaniau */
+
+.search-results {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+  padding: 8px;
+  position: absolute;
+  display: none;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.search-results p {
+  margin: 0;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.search-results p:hover {
+  background-color: #f5f5f5;
 }
