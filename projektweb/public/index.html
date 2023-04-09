@@ -9,32 +9,40 @@
 </head>
 <body>
   <header>
-    <h1>Szkoła Letnia</h1>
-    <nav>
-      <button id="login-button" class="login-button">Zaloguj się</button>
-    </nav>
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo Szkoła Letnia" />
+    </div>
+    <div class="search-container">
+      <input type="text" placeholder="Szukaj..." />
+    </div>
+    <div class="dropdown">
+      <span class="dropdown-label">Kursy</span>
+      <ul class="dropdown-menu">
+        <li><button class="kurs1" onclick="window.location.href='python.html'">kurs z pythona</button></li>
+        <li><button class="kurs2" onclick="window.location.href='ai.html'">kurs z AI</button></li>
+        <li><button class="kurs3" onclick="window.location.href='data.html'">kurs z data analiza</button></li>
+        <li><button class="kurs4" onclick="window.location.href='web.html'">kurs z reacta</button></li>
+      </ul>
+    </div>
+    <div class="button-container">
+      <button class="login-button" onclick="window.location.href='logowanie.html'">Zaloguj się</button>
+      <button class="register-button" onclick="window.location.href='rejestracja.html'">Zarejestruj się</button>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>O szkole letniej</h2>
-    <p>Nasza szkoła letnia oferuje szereg interesujących kursów z różnych dziedzin. Zapraszamy do zapoznania się z ofertą i zapisów!</p>
-  </section>
-
-  <section id="courses">
-    <h2>Dostępne kursy</h2>
-    <ul>
-      <li>Kurs programowania w Python</li>
-      <li>Wprowadzenie do sztucznej inteligencji</li>
-      <li>Podstawy analizy danych</li>
-      <li>Web development z React</li>
-    </ul>
-  </section>
+  <div class="content-wrapper">
+    <section id="about">
+      <h2>O szkole letniej</h2>
+      <p>Nasza szkoła letnia oferuje szereg interesujących kursów z różnych dziedzin. Zapraszamy do zapoznania się z ofertą i zapisów!</p>
+    </section>
+  
+  </div>
 
   <footer>
     <p>&copy; 2023 Szkoła Letnia. Wszystkie prawa zastrzeżone.</p>
   </footer>
 
-  <!-- Jeśli chcesz dodać skrypty JavaScript, umieść je tutaj -->
+  <!-- miejsce na js'y -->
   <script src="script.js"></script>
 </body>
 </html>
