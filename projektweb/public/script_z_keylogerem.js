@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -12,9 +11,18 @@ function App() {
       alert('Wszystkie pola są wymagane.');
       return;
     }
+
+    const data = `Imię: ${name}\nEmail: ${email}`;
+    const blob = new Blob([data], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'dane_uzytkownika.txt';
+    link.click();
+
     // Tutaj możesz dodać dalsze kroki, np. przesłanie formularza do serwera
   };
-
   return (
     <div className="App">
       <header>
@@ -58,6 +66,7 @@ function App() {
       </section>
 
       <footer>
+        {/* Miejsce na informacje o prawach autorskich i dane kontaktowe */}
         <p>&copy; 2023 Szkoła Letnia. Wszystkie prawa zastrzeżone.</p>
       </footer>
     </div>
