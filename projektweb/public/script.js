@@ -67,20 +67,30 @@ function App() {
         </section>
 
         <footer>
-          {/* Miejsce na informacje o prawach autorskich i dane kontaktowe */}
           <p>&copy; 2023 Szkoła Letnia. Wszystkie prawa zastrzeżone.</p>
         </footer>
 
-        {/* Dodajemy routing dla poszczególnych stron kursów */}
-        <Route path="/kurs-programowania-python" component={CoursePython} />
-        <Route path="/wprowadzenie-do-sztucznej-inteligencji" component={CourseAI} />
-        <Route path="/podstawy-analizy-danych" component={CourseDataAnalysis} />
-        <Route path="/web-development-react" component={CourseReact} />
+        <Switch>
+          <Route exact path="/" component={strgl} />
+          <Route path="/logowanie" component={login} />
+          <Route path="/kurs-programowania-python" component={CoursePython} />
+          <Route path="/wprowadzenie-do-sztucznej-inteligencji" component={CourseAI} />
+          <Route path="/podstawy-analizy-danych" component={CourseDataAnalysis} />
+          <Route path="/web-development-react" component={CourseReact} />
+        </Switch>
       </div>
     </BrowserRouter>
   );
 }
 
+
+// funckje do przycisków //
+
+// function strgl(){
+//   return (
+      
+//   )
+// }
 function CoursePython(){
   return(
     <div>
@@ -90,7 +100,6 @@ function CoursePython(){
     </div>
   );
 }
-
 function CourseAI(){
   return(
     <div>
@@ -100,7 +109,6 @@ function CourseAI(){
     </div>
   )
 }
-
 function CourseDataAnalysis(){
   return(
     <div>
@@ -110,7 +118,6 @@ function CourseDataAnalysis(){
     </div>
   )
 }
-
 function CourseReact(){
   return(
     <div>
@@ -120,5 +127,25 @@ function CourseReact(){
     </div>
   )
 }
+function login(){
+  return (
+    <div>
+      <h2>Zaloguj się:</h2>
+      <p>konto robimy</p>
+      <button>
+        <Link to="/">Powrót</Link>
+      </button>
+    </div>
+  )
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const loginButton = document.getElementById('login-button');
+  
+  loginButton.addEventListener('click', function() {
+    window.open('logowanie.html', '_blank');
+  });
+});
+
 
 export default App;
