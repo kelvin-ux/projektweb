@@ -174,7 +174,9 @@
 
 /* lista kat */
 .dropdown {
-  position: relative;
+  position: sticky;
+  left: -300px;
+  border: 0.1px solid #7d807b;
   display: inline-block;
 }
 
@@ -231,9 +233,12 @@
   display: flex;
   justify-content: center;
   margin: 0 1rem;
+  max-width: 400px;
+  width: 100%; 
 }
 
 .search-container input {
-  width: 30%;
-  padding: 0.5rem;
+  width: 80%;
+  padding: 0.3rem;
+  box-sizing: border-box;
 }
