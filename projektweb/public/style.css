@@ -285,16 +285,17 @@ background-color: #ffffff1e;
 }
 
 .search-results {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: #ffffff;
+  background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+  padding: 8px;
+  position: absolute;
+  display: none;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
   z-index: 1000;
 }
 
@@ -313,6 +314,9 @@ background-color: #ffffff1e;
   cursor: pointer;
 }
 
+.search-results p.active {
+  background-color: #f1f1f1;
+}
 
 /* ikonka */
 

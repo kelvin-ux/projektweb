@@ -6,6 +6,8 @@ const courses = [
 ];
 
 document.getElementById("search-input").addEventListener("input", searchCourses);
+document.getElementById("search-input").addEventListener("keydown", navigateResults);
+
 
 function searchCourses(event) {
   const searchTerm = event.target.value.toLowerCase();
@@ -24,9 +26,42 @@ function searchCourses(event) {
   let searchResultsHTML = "";
 
   filteredCourses.forEach((course) => {
-    searchResultsHTML += `<p onclick="window.location.href='${course.url}'">${course.title}</p>`;
+    searchResultsHTML += `<p data-url="${course.url}">${course.title}</p>`;
   });
 
   searchResultsElement.innerHTML = searchResultsHTML;
   searchResultsElement.classList.add("show");
+  currentSelection = -1;
 }
+
+function navigateResults(event) {
+  const searchResultsElement = document.getElementById("search-results");
+  const searchResults = Array.from(searchResultsElement.children);
+
+  if (event.key === "ArrowDown") {
+    if (currentSelection < searchResults.length - 1) {
+      currentSelection++;
+      searchResults[currentSelection].scrollIntoView({ block: "nearest" });
+      searchResults[currentSelection].classList.add("active");
+      if (currentSelection > 0) {
+        searchResults[currentSelection - 1].classList.remove("active");
+      }
+    }
+  } else if (event.key === "ArrowUp") {
+    if (currentSelection > 0) {
+      currentSelection--;
+      searchResults[currentSelection].scrollIntoView({ block: "nearest" });
+      searchResults[currentSelection].classList.add("active");
+      searchResults[currentSelection + 1].classList.remove("active");
+    }
+  } else if (event.key === "Enter" && currentSelection > -1) {
+    window.location.href = searchResults[currentSelection].dataset.url;
+  }
+}
+
+// Dodajemy nasłuchiwanie zdarzenia click dla wyników wyszukiwania
+document.getElementById("search-results").addEventListener("click", (event) => {
+  if (event.target && event.target.matches("p")) {
+    window.location.href = event.target.dataset.url;
+  }
+});
