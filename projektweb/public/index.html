@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Szkoła Letnia</title>
   <link rel="stylesheet" href="style.css">
+  <script src="wyszukiwanie.js defer"></script>
 </head>
 <body>
   <header>
@@ -14,9 +15,10 @@
           <img src="logo2.png" alt="Logo Szkoła Letnia" />
       </a>
   </div>
-    <div class="search-container">
-      <input id="search-input" type="text" class="search-input" placeholder="Wyszukaj kurs..." />
-    </div>
+  <div class="search-container">
+    <input id="search-input" type="text" class="search-input" placeholder="Wyszukaj kurs..." />
+    <div id="search-results" class="search-results"></div>
+  </div>
     <div class="dropdown-container">
       <div class="dropdown">
         <span class="dropdown-label">Kursy</span>
