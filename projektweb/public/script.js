@@ -14,8 +14,11 @@ function searchCourses(event) {
   const searchResultsElement = document.getElementById("search-results");
 
   if (searchTerm === "") {
-    searchResultsElement.innerHTML = "";
     searchResultsElement.classList.remove("show");
+    searchResultsElement.classList.add("hide");
+    setTimeout(() => {
+      searchResultsElement.innerHTML = "";
+    }, 300);
     return;
   }
 
@@ -30,9 +33,11 @@ function searchCourses(event) {
   });
 
   searchResultsElement.innerHTML = searchResultsHTML;
+  searchResultsElement.classList.remove("hide");
   searchResultsElement.classList.add("show");
   currentSelection = -1;
 }
+
 
 function navigateResults(event) {
   const searchResultsElement = document.getElementById("search-results");
@@ -59,7 +64,12 @@ function navigateResults(event) {
   }
 }
 
-// Dodajemy nasłuchiwanie zdarzenia click dla wyników wyszukiwania
+function updateSearchInput(value) {
+  const searchInputElement = document.getElementById("search-input");
+  searchInputElement.value = value;
+}
+
+
 document.getElementById("search-results").addEventListener("click", (event) => {
   if (event.target && event.target.matches("p")) {
     window.location.href = event.target.dataset.url;
