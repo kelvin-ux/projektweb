@@ -1,3 +1,5 @@
+// wyszukiwanie 
+
 const courses = [
   { id: "kurs1", title: "kurs z pythona", url: "python.html" },
   { id: "kurs2", title: "kurs z AI", url: "ai.html" },
@@ -41,32 +43,48 @@ function searchCourses(event) {
 
 function navigateResults(event) {
   const searchResultsElement = document.getElementById("search-results");
-  const searchResults = Array.from(searchResultsElement.children);
+  const searchResultsItems = searchResultsElement.getElementsByTagName("p");
 
   if (event.key === "ArrowDown") {
-    if (currentSelection < searchResults.length - 1) {
-      currentSelection++;
-      searchResults[currentSelection].scrollIntoView({ block: "nearest" });
-      searchResults[currentSelection].classList.add("active");
-      if (currentSelection > 0) {
-        searchResults[currentSelection - 1].classList.remove("active");
+    if (currentSelection < searchResultsItems.length - 1) {
+      if (currentSelection >= 0) {
+        searchResultsItems[currentSelection].classList.remove("selected");
       }
+      currentSelection++;
+      searchResultsItems[currentSelection].classList.add("selected");
+      updateSearchInput(searchResultsItems[currentSelection].textContent);
     }
   } else if (event.key === "ArrowUp") {
     if (currentSelection > 0) {
+      searchResultsItems[currentSelection].classList.remove("selected");
       currentSelection--;
-      searchResults[currentSelection].scrollIntoView({ block: "nearest" });
-      searchResults[currentSelection].classList.add("active");
-      searchResults[currentSelection + 1].classList.remove("active");
+      searchResultsItems[currentSelection].classList.add("selected");
+      updateSearchInput(searchResultsItems[currentSelection].textContent);
     }
-  } else if (event.key === "Enter" && currentSelection > -1) {
-    window.location.href = searchResults[currentSelection].dataset.url;
+  } else if (event.key === "Enter" && currentSelection >= 0) {
+    window.location.href = searchResultsItems[currentSelection].dataset.url;
   }
 }
+
 
 function updateSearchInput(value) {
   const searchInputElement = document.getElementById("search-input");
   searchInputElement.value = value;
+}
+
+function showSearchResults(searchResults) {
+  searchResultsContainer.innerHTML = "";
+  searchResults.forEach((result, index) => {
+    const resultElement = document.createElement("p");
+    resultElement.innerHTML = `<img src="${result.logo}" alt="Logo ${result.title}">${result.title}`;
+    resultElement.addEventListener("click", () => {
+      window.location.href = result.link;
+    });
+    if (index === currentSelection) {
+      resultElement.classList.add("selected");
+    }
+    searchResultsContainer.appendChild(resultElement);
+  });
 }
 
 
@@ -75,3 +93,4 @@ document.getElementById("search-results").addEventListener("click", (event) => {
     window.location.href = event.target.dataset.url;
   }
 });
+
