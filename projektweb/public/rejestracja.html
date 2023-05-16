@@ -1,23 +1,65 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rejestracja - Szkoła Letnia</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <header>
-    <h2>Rejestracja</h1>
-  </header>
-
-  <section>
-    <h2>Formularz logowania</h2>
-    
-  </section>
-
-  <footer>
-    <p>&copy; 2023 Szkoła Letnia. Wszystkie prawa zastrzeżone.</p>
-  </footer>
-</body>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylerejestracja.css">
+        <meta charset="UTF-8">
+        <title>Formularz rejestracyjny - Szkoła letnia</title>
+    </head>
+    <body>
+        <h1>Formularz rejestracyjny - Szkołą letnia</h1>
+        <div class="container">
+            <form>
+                <div class="name-container">
+                    <div class="form-group-name">
+                        <label for="name">Imię</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group-name">
+                        <label for="name">Nazwisko</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adres e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="age">Wiek</label>
+                    <input type="text" id="age" name="age" required>
+                    <label for="tel">Numer telefonu w podanym formacie</label>
+                    <input type="tel" id="tel" name="tel" placeholder="XXX-XXX-XXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+                </div>
+                <div class="radio-container">
+                    <label>
+                        <input type="radio" name="gender" value="man"> Mężczyzna
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="woman"> Kobieta
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="nonbinary"> Inne / Wolę nie podawać
+                    </label>
+                </div>
+                <div class="form-group-sel">
+                    <label for="course">Kurs IT:</label>
+                    <select id="course" name="course" required>
+                        <option value="none">Wybierz jedną opcję</option>
+                        <option value="python">Python</option>
+                        <option value="javas">JS</option>
+                        <option value="html">HTML</option>
+                    </select>
+                </div>
+                <div class="form-group-sel">
+                    <label for="experience">Doświadczenie programistyczne:</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Wybierz jedną opcję</option>
+                        <option value="beginner">Początkujący</option>
+                        <option value="intermediate">Średniozaawansowany</option>
+                        <option value="advanced">Zaawansowany</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Zarejestruj się">
+                </div>
+            </form>
+        </div>
+    </body>
 </html>
