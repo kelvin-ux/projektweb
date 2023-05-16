@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "@fullcalendar/core": "^6.1.7",
+    "@fullcalendar/daygrid": "^6.1.7",
+    "@fullcalendar/interaction": "^6.1.7",
+    "@fullcalendar/timegrid": "^6.1.7",
     "react-router-dom": "^6.10.0"
   }
 }

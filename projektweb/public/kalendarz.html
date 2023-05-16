@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Szkoła Letnia</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fullcalendar.io/releases/main/base.css' rel='stylesheet' />
+  <link href='https://fullcalendar.io/releases/main/main.css' rel='stylesheet' />
+  <script src='https://fullcalendar.io/releases/main/main.js'></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo2.png" alt="Logo Szkoła Letnia" />
+        </a>
+    </div>
+    <div class="search-container">
+      <input id="search-input" type="text" class="search-input" placeholder="Wyszukaj kurs..." />
+      <div id="search-results" class="search-results"></div>
+    </div>
+    <div class="dropdown-container">
+      <div class="dropdown">
+        <span class="dropdown-label">Kursy</span>
+        <ul class="dropdown-menu">
+          <li><button class="kurs1" onclick="window.location.href='python.html'">kurs z pythona</button></li>
+          <li><button class="kurs2" onclick="window.location.href='ai.html'">kurs z AI</button></li>
+          <li><button class="kurs3" onclick="window.location.href='data.html'">kurs z data analiza</button></li>
+          <li><button class="kurs4" onclick="window.location.href='web.html'">kurs z reacta</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="login-button" onclick="window.location.href='logowanie.html'">Zaloguj się</button>
+      <button class="register-button" onclick="window.location.href='rejestracja.html'">Zarejestruj się</button>
+    </div>
+  </header>
+
+  <div id='calendar'>
+
+  </div>
+  <footer>
+    <p>&copy; 2023 Szkoła Letnia. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- miejsce na js'y -->
+  <script src="script.js"></script>
+  <script src="calendar.js"></script>
+</body>
+</html>
