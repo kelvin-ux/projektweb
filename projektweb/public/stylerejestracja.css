@@ -1,5 +1,5 @@
 body {
-    background: url('maziɣ-imaziɣen.gif') no-repeat center center fixed; 
+    background: url('xd1.jpg') no-repeat center center fixed; 
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
@@ -11,7 +11,7 @@ body {
 
   h1 {
     text-align: center;
-    color: #333333;
+    color: #e2e2e2;
   }
 
   .container {
@@ -21,6 +21,7 @@ body {
     padding: 20px;
     border-radius: 7px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #202020;
   }
 
   .form-group-name{
@@ -49,7 +50,6 @@ body {
   .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #666666;
   }
 
   .form-group input[type="text"],
