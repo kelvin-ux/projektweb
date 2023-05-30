@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden; /*idk*/
 }
 
 /* backgr */
@@ -409,15 +410,19 @@ body.dark{
 /* kalendarz */
 
 #calendar {
-  display: flex;
+  color: #131313;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px 16px;
+  /* display: flex;
   justify-content: center;
   position: fixed;
   top: 35px;
   right: 10vw; 
   align-items: center;
   background: none;
+  margin-right:  79.5px; */
 }
-
 .kalendarz {
   color: #4d4545;
   font-size: 18px;
@@ -443,16 +448,27 @@ body.dark{
   cursor: pointer;
   vertical-align: middle;
   transition: color 0.3s ease;
+  
 }
 
 .dropdown:hover{
   color: #13129d89;
+  
 }
 .dropdown-label {
   color: #131313;
   font-size: 18px;
   cursor: pointer;
   padding: 8px 16px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-label:hover {
+  color: #14129d89;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  
 }
 
 .dropdown-menu {
@@ -504,4 +520,109 @@ body.dark{
   justify-content: center;
   align-items: center;
   color: #fff;
+}
+
+
+
+
+
+/* Styl menu bocznego */
+.sidebar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 20px;
+  width: 100%;
+  background: #ccc;
+}
+.sidebar-button {
+  border: 0;
+  border-radius: 5px;
+  background: #ffffff;
+
+}
+.sidebar-menu {
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  top: 20px;
+  right: 300px;
+  padding: 0;
+  background: #34b399;
+  transition: 0.3s transform ease-in-out;
+}
+
+.sidebar-menu ul {
+  position: absolute;
+  display: flex;
+  height: calc(100% - 20px);
+  flex-wrap: wrap;
+  margin: 0 10px;
+  padding: 0;
+  list-style-type: none;
+  align-content: flex-start
+}
+
+.sidebar-menu ul li{
+  display: flex;
+  height: 30px;
+  background: #ffffff;
+  flex-basis: 100%;
+  margin-top: 20px;
+  color: #696e9e;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.sidebar-menu ul li a{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* .sidebar-menu ul li a:hover{
+  background: darkred;
+  color:fuchsia;
+} */
+
+.sidebar-menu-trigger:focus ~ .sidebar-menu, .sidebar-menu:hover{
+  transform: translateX(-300px); 
+}
+/*
+
+#sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    height: 100vh; 
+}
+
+
+#sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 10px;
+}
+*/
+/*
+#sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    display: block; /* Dodanie tej właściwości spowoduje, że linki będą blokowe i zajmą całą szerokość dostępną wewnątrz elementu li */
+/*}
+
+#sidebar ul li:hover {
+    background-color: #ddd;
 }
