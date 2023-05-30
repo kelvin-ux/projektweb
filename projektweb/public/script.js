@@ -94,3 +94,12 @@ document.getElementById("search-results").addEventListener("click", (event) => {
   }
 });
 
+document.getElementById("menu-button").addEventListener("click", function() {
+  const sidebarMenu = document.getElementById("sidebar-menu");
+  if (sidebarMenu.style.transform === "translateX(0%)") {
+    sidebarMenu.style.transform = "translateX(100%)";
+  } else {
+    sidebarMenu.style.transform = "translateX(0%)";
+  }
+});
+

@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden; /*idk*/
+  
 }
 
 /* backgr */
@@ -20,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  overflow: hidden;
 }
 
 a {
@@ -377,25 +378,6 @@ nav {
   margin-right: 8px;
 }
 
-
-/* menu boczne */
-
-.sidebar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 250px;
-  padding: 10px 14px;
-  background: var(--sidebar-color);
-  transition: var(--tran-05);
-  z-index: 100;  
-}
-.sidebar.close{
-  width: 88px;
-}
-
-
 /* tryb nocny */
 
 body.dark{
@@ -522,38 +504,45 @@ body.dark{
   color: #fff;
 }
 
-
-
-
-
 /* Styl menu bocznego */
-.sidebar {
+.sidebar-nav {
   display: flex;
+  position: fixed;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px;
+  padding: 10px 14px;
   box-sizing: border-box;
   height: 20px;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: #ccc;
 }
-.sidebar-button {
+
+.sidebar-nav.close{
+  width: 88px;
+} 
+
+.sidebar-menu-button {
   border: 0;
   border-radius: 5px;
   background: #ffffff;
-
+  position: fixed;
+  top: 65px;
+  left: px;
 }
+
 .sidebar-menu {
   display: flex;
   box-sizing: border-box;
   position: absolute;
   height: 100%;
   width: 300px;
-  top: 20px;
-  right: 300px;
+  top: 90px;
+  left: -320px;
   padding: 0;
   background: #34b399;
-  transition: 0.3s transform ease-in-out;
+  transition: right 0.3s transform ease-out 0s;
+  z-index: 99999;
 }
 
 .sidebar-menu ul {
@@ -568,14 +557,14 @@ body.dark{
 }
 
 .sidebar-menu ul li{
-  display: flex;
-  height: 30px;
-  background: #ffffff;
-  flex-basis: 100%;
-  margin-top: 20px;
-  color: #696e9e;
-  border-radius: 5px;
-  overflow: hidden;
+    display: flex;
+    height: 30px;
+    background: #ffffff;
+    flex-basis: 100%;
+    margin-top: 20px;
+    color: #696e9e;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .sidebar-menu ul li a{
@@ -592,37 +581,8 @@ body.dark{
 /* .sidebar-menu ul li a:hover{
   background: darkred;
   color:fuchsia;
-} */
+}  */
 
-.sidebar-menu-trigger:focus ~ .sidebar-menu, .sidebar-menu:hover{
-  transform: translateX(-300px); 
-}
-/*
-
-#sidebar {
-    width: 200px;
-    background-color: #f1f1f1;
-    height: 100vh; 
-}
-
-
-#sidebar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#sidebar ul li {
-    padding: 10px;
-}
-*/
-/*
-#sidebar ul li a {
-    text-decoration: none;
-    color: #000;
-    display: block; /* Dodanie tej właściwości spowoduje, że linki będą blokowe i zajmą całą szerokość dostępną wewnątrz elementu li */
-/*}
-
-#sidebar ul li:hover {
-    background-color: #ddd;
+.sidebar-menu-button:focus ~ .sidebar-menu, .sidebar-menu:hover{
+  transform: translateX(300px); 
 }
