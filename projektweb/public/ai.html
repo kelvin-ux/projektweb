@@ -42,21 +42,21 @@
     </section>
     <div class="photo-card-container">
       <div class="photo-card">
-        <img src="python1.jpg" alt="Photo">
+        <img src="AI1.png" alt="Photo">
         <div class="overlay"></div>
-        <div class="text">Python Basics</div>
+        <div class="text">AI Basics</div>
       </div>
     
       <div class="photo-card">
-        <img src="python2.jpg" alt="Photo">
+        <img src="AI2.png" alt="Photo">
         <div class="overlay"></div>
-        <div class="text">Python Advanced</div>
+        <div class="text">AI Advanced</div>
       </div>
     
       <div class="photo-card">
-        <img src="python3.jpg" alt="Photo">
+        <img src="AI3.png" alt="Photo">
         <div class="overlay"></div>
-        <div class="text">Python Proficiency</div>
+        <div class="text">AI Proficiency</div>
       </div>
     </div>
   
@@ -65,7 +65,39 @@
   <footer>
     <p>&copy; 2023 Szkoła Letnia. Wszystkie prawa zastrzeżone.</p>
   </footer>
+  <div id="myModal" class="modal">
+    <div class="blurry-background"></div>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Opis kursu</h2>
+      <p id="course-description">Tutaj będzie opis kursu...</p>
+    </div>
+  </div>
 
+  <!-- miejsce na js'y -->
+  <script src="script.js"></script>
+  <script>
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    var cards = document.getElementsByClassName("photo-card");
+    var descriptions = ["Kurs AI Basics to doskonałe wprowadzenie dla osób, które chcą zrozumieć podstawy sztucznej inteligencji (AI). W trakcie tego kursu poznasz podstawowe koncepcje AI, takie jak uczenie maszynowe, sieci neuronowe i głębokie uczenie. Będziesz miał okazję zapoznać się z różnymi typami algorytmów AI i nauczyć się, jak wykorzystać je do rozwiązywania problemów. Poprzez praktyczne ćwiczenia i projekty będziesz stopniowo rozwijać swoje umiejętności w zakresie AI i zdobywać pewność w pracy z podstawowymi narzędziami i technikami AI.", 
+    "Kurs AI Advanced jest stworzony dla osób, które już mają podstawową wiedzę na temat sztucznej inteligencji i chcą poszerzyć swoje umiejętności w tej dziedzinie. W trakcie tego kursu zgłębisz zaawansowane techniki i narzędzia używane w AI, takie jak zaawansowane modele uczenia maszynowego, głębokie sieci neuronowe, przetwarzanie języka naturalnego i widzenie komputerowe. Nauczysz się również optymalizacji modeli AI, walidacji i interpretacji wyników oraz etycznych aspektów AI. Poprzez rozwijanie zaawansowanych projektów AI, zdobędziesz umiejętności potrzebne do rozwiązywania bardziej skomplikowanych problemów z wykorzystaniem AI.",
+    "Kurs AI Proficiency jest skierowany do osób, które chcą osiągnąć zaawansowany poziom w zakresie sztucznej inteligencji. W trakcie tego kursu zdobędziesz umiejętności potrzebne do tworzenia zaawansowanych modeli AI, takich jak sieci neuronowe rekurencyjne (RNN), sieci neuronowe konwolucyjne (CNN) i generatywne modele adversarialne (GAN). Nauczysz się również obsługi zaawansowanych frameworków i bibliotek do AI, takich jak TensorFlow i PyTorch. Poprzez rozwiązywanie zaawansowanych problemów i projektów AI, zdobędziesz pewność w pracy z najnowszymi technologiami i będziesz w stanie tworzyć innowacyjne rozwiązania oparte na sztucznej inteligencji."];
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].onclick = function() {
+        document.getElementById("course-description").innerText = descriptions[i];
+        modal.style.display = "block";
+      }
+    }
+    span.onclick = function(){
+      modal.style.display = "none";
+    }
+    window.onclick = function(event){
+      if(event.target == modal){
+        modal.style.display = "none";
+      }
+    }
+    </script>  
   <!-- miejsce na js'y -->
   <script src="script.js"></script>
 </body>

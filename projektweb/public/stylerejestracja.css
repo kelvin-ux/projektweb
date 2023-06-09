@@ -102,3 +102,13 @@ body {
   .name-container{
     display: flex;
   }
+
+  .goback button {
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      padding: 5px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 32px;
+  }
