@@ -517,8 +517,8 @@ body.dark{
   display: inline-block;
   overflow: hidden;
   cursor: pointer;
-  width: 430px; 
-  height: 270px; 
+  width: 384px; 
+  height: 216px; 
 }
 .photo-card img {
   display: block;
