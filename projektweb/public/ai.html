@@ -80,10 +80,11 @@
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
     var cards = document.getElementsByClassName("photo-card");
-    for (let card of cards) {
-      card.onclick = function() {
+    var descriptions = ["Opis kursu Python Basics", "Opis kursu Python Advanced", "Opis kursu Python Proficiency"];
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].onclick = function() {
+        document.getElementById("course-description").innerText = descriptions[i];
         modal.style.display = "block";
-        document.getElementById("course-description").innerText = "Some description of the course...";
       }
     }
     span.onclick = function(){
