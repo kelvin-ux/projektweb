@@ -35,17 +35,20 @@
     </div>
   </header>
 
+  
+
   <div class="content-wrapper">
     <section id="about">
       <h2>Kurs programowania w języku python</h2>
     </section>
+    
     <div class="photo-card-container">
       <div class="photo-card">
         <img src="python1.jpg" alt="Photo">
         <div class="overlay"></div>
         <div class="text">Python Basics</div>
       </div>
-    
+      
       <div class="photo-card">
         <img src="python2.jpg" alt="Photo">
         <div class="overlay"></div>
@@ -58,14 +61,43 @@
         <div class="text">Python Proficiency</div>
       </div>
     </div>
-  
   </div>
 
   <footer>
     <p>&copy; 2023 Szkoła Letnia. Wszystkie prawa zastrzeżone.</p>
   </footer>
 
+  <div id="myModal" class="modal">
+    <div class="blurry-background"></div>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Opis kursu</h2>
+      <p id="course-description">Tutaj będzie opis kursu...</p>
+    </div>
+  </div>
+
   <!-- miejsce na js'y -->
   <script src="script.js"></script>
+  <script>
+    var modal = document.getElementById("myModal");
+    var close = document.getElementsByClassName("close")[0];
+    var photoCards = document.getElementsByClassName("photo-card");
+    for (var i = 0; i < photoCards.length; i++) {
+      photoCards[i].onclick = function() {
+        modal.style.display = "block";
+        document.getElementById("course-description").innerText = "Tutaj dodaj opis kursu zależny od klikniętej karty";
+      }
+    }
+    close.onclick = function() {
+      modal.style.display = "none";
+      document.body.style.filter = 'none';
+    }
+    window.onclick = function(event){
+      if (event.target == modal){
+        modal.style.display = "none";
+        document.body.style.filter = 'none';
+      }
+    }
+    </script>  
 </body>
 </html>

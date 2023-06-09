@@ -103,3 +103,29 @@ document.getElementById("menu-button").addEventListener("click", function() {
   }
 });
 
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the close button
+var close = document.getElementsByClassName("close")[0];
+
+// When the user clicks on a photo card, open the modal
+var photoCards = document.getElementsByClassName("photo-card");
+for (var i = 0; i < photoCards.length; i++) {
+  photoCards[i].onclick = function() {
+    modal.style.display = "block";
+    document.getElementById("course-description").innerText = "Tutaj dodaj opis kursu zależny od klikniętej karty";
+  }
+}
+
+// When the user clicks on the close button, close the modal
+close.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
