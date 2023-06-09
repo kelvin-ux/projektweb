@@ -65,7 +65,36 @@
   <footer>
     <p>&copy; 2023 Szkoła Letnia. Wszystkie prawa zastrzeżone.</p>
   </footer>
+  <div id="myModal" class="modal">
+    <div class="blurry-background"></div>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Opis kursu</h2>
+      <p id="course-description">Tutaj będzie opis kursu...</p>
+    </div>
+  </div>
 
+  <!-- miejsce na js'y -->
+  <script src="script.js"></script>
+  <script>
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    var cards = document.getElementsByClassName("photo-card");
+    for (let card of cards) {
+      card.onclick = function() {
+        modal.style.display = "block";
+        document.getElementById("course-description").innerText = "Some description of the course...";
+      }
+    }
+    span.onclick = function(){
+      modal.style.display = "none";
+    }
+    window.onclick = function(event){
+      if(event.target == modal){
+        modal.style.display = "none";
+      }
+    }
+    </script>  
   <!-- miejsce na js'y -->
   <script src="script.js"></script>
 </body>
