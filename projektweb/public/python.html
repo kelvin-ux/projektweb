@@ -80,22 +80,20 @@
   <script src="script.js"></script>
   <script>
     var modal = document.getElementById("myModal");
-    var close = document.getElementsByClassName("close")[0];
-    var photoCards = document.getElementsByClassName("photo-card");
-    for (var i = 0; i < photoCards.length; i++) {
-      photoCards[i].onclick = function() {
+    var span = document.getElementsByClassName("close")[0];
+    var cards = document.getElementsByClassName("photo-card");
+    for (let card of cards) {
+      card.onclick = function() {
         modal.style.display = "block";
-        document.getElementById("course-description").innerText = "Tutaj dodaj opis kursu zależny od klikniętej karty";
+        document.getElementById("course-description").innerText = "Some description of the course...";
       }
     }
-    close.onclick = function() {
+    span.onclick = function(){
       modal.style.display = "none";
-      document.body.style.filter = 'none';
     }
     window.onclick = function(event){
-      if (event.target == modal){
+      if(event.target == modal){
         modal.style.display = "none";
-        document.body.style.filter = 'none';
       }
     }
     </script>  
