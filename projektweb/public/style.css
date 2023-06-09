@@ -621,6 +621,7 @@ body.dark{
   border: 2px solid #cac7c7;
   padding: 20px;
   margin: auto;
+  margin-top: 25px;
   position: static;
   box-shadow: 0px 0px 10px rgba(128, 120, 120, 0.1);
   border-radius: 15px;
