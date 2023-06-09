@@ -79,7 +79,9 @@
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
     var cards = document.getElementsByClassName("photo-card");
-    var descriptions = ["Opis kursu Python Basics", "Opis kursu Python Advanced", "Opis kursu Python Proficiency"];
+    var descriptions = ["Kurs React Basics to doskonałe wprowadzenie dla osób, które chcą nauczyć się tworzenia interaktywnych interfejsów użytkownika przy użyciu biblioteki React. W trakcie tego kursu poznasz podstawowe koncepcje React, takie jak komponenty, stan, props i cykl życia komponentu. Będziesz również mieć okazję praktycznie wykorzystać zdobytą wiedzę poprzez tworzenie prostych aplikacji React. To świetny punkt wyjścia dla każdego, kto chce zdobyć solidne podstawy w programowaniu w React.", 
+    "Kurs React Advanced to idealna kontynuacja dla osób, które już mają podstawową wiedzę na temat React i chcą poszerzyć swoje umiejętności w tej dziedzinie. W trakcie tego kursu będziesz zgłębiać zaawansowane techniki i narzędzia używane w programowaniu w React. Nauczysz się zarządzania stanem aplikacji za pomocą biblioteki Redux, korzystania z routingu za pomocą React Router, a także optymalizacji wydajności aplikacji React. Poprzez rozwijanie zaawansowanych projektów praktycznych, zdobędziesz pewność w tworzeniu zaawansowanych aplikacji w React.", 
+    "Kurs React Proficiency jest stworzony dla osób, które chcą stać się ekspertami w programowaniu w React. Podczas tego kursu zgłębisz najnowsze i zaawansowane technologie używane w ekosystemie React. Nauczysz się projektowania skalowalnych i elastycznych aplikacji React, używając architektur takich jak Flux i GraphQL. Poznasz również zaawansowane techniki testowania aplikacji React, wdrażania aplikacji na serwery produkcyjne i optymalizacji wydajności. Ten kurs pozwoli Ci osiągnąć poziom profesjonalizmu w programowaniu w React."];
     for (let i = 0; i < cards.length; i++) {
       cards[i].onclick = function() {
         document.getElementById("course-description").innerText = descriptions[i];
