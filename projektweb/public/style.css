@@ -726,7 +726,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(45deg, #333, #645c5c);
+  background: linear-gradient(45deg, #686666, #d8cbcb);
   color: #fff;  
   font-size: 24px;
   margin-bottom: 8px;
@@ -748,7 +748,7 @@ input[type=email], input[type=password] {
 }
 
 .submit-btn {
-  background-color: #63696b;
+  background-color: #595c5e;
   border: none;
   color: white;
   padding: 15px 32px;
