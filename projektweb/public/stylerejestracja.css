@@ -112,3 +112,19 @@ body {
       cursor: pointer;
       border-radius: 32px;
   }
+
+
+/* logo */
+
+.logoz {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 2;
+  left: 0;
+}
+
+.logoz img {
+  height: 70px;
+  width: auto;
+}
